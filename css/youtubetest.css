@@ -1,0 +1,211 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --blue-color: #3a93e0;
+  --black-color: #202020;
+  --grey-dark-color: #181818;
+  --gery-light-color: #909090;
+  --red-color: #ff0000;
+  /* size */
+  --padding: 12px;
+  --avarta-size: 36px;
+
+  /* font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+button,
+button:focus {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--grey-dark-color);
+  color: var(--white-color);
+}
+header .logo_box i {
+  color: var(--red-color);
+}
+header .search_box .fa-search {
+  margin-right: var(--padding);
+}
+
+/* player */
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* info */
+.info {
+  padding: var(--padding);
+}
+
+/* metadata */
+
+.info .metadata .hashtags {
+  display: flex;
+}
+.info .metadata .hashtags li,
+.info .metadata .hashtags li a {
+  margin-right: var(--padding);
+  color: var(--blue-color);
+  font-size: var(--font-medium);
+}
+.info .metadata .titleandbutton {
+  display: flex;
+}
+
+.info .metadata .titleandbutton .title {
+  font-size: var(--font-medium);
+  margin-right: var(--padding);
+}
+.info .metadata .titleandbutton .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.info .metadata .titleandbutton .moreBtn {
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .metadata .titleandbutton .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+
+.info .metadata .views {
+  color: var(--gery-light-color);
+  font-size: var(--font-small);
+}
+
+/* action */
+.info .action {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--padding);
+}
+
+.info .action button i {
+  display: flex;
+  justify-content: center;
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: var(--font-medium);
+  color: var(--gery-light-color);
+}
+.info .action button i.active {
+  color: var(--blue-color);
+}
+
+/* channel */
+.info .channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--gery-light-color);
+  border-bottom: 1px solid var(--gery-light-color);
+  padding: var(--padding);
+}
+.info .channel .channel_box {
+  display: flex;
+  align-items: center;
+}
+.info .channel_box img {
+  width: var(--avarta-size);
+  height: var(--avarta-size);
+  border-radius: 50%;
+  margin-right: var(--padding);
+}
+.info .channel_box .channel_info {
+  display: flex;
+  flex-direction: column;
+}
+.info .channel_box .channel_info .title {
+  font-size: var(--font-medium);
+}
+.info .channel_box .channel_info .subscribers {
+  color: var(--gery-light-color);
+  font-size: var(--font-small);
+}
+.info .subscribe {
+  font-size: var(--font-medium);
+  color: var(--red-color);
+  text-transform: uppercase;
+}
+
+/* upnext */
+.upnext {
+  padding: var(--padding);
+}
+.upnext .upnext_title {
+  font-size: var(--font-medium);
+  color: var(--gery-light-color);
+  display: block;
+  margin-bottom: calc(var(--padding) / 2);
+}
+.upnext .item {
+  display: flex;
+  justify-content: space-between;
+}
+.upnext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+.upnext .item .img img {
+  width: 100%;
+}
+.upnext .item .upnext_box {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+.upnext .item .upnext_box .title {
+  font-size: var(--font-medium);
+  margin-bottom: calc(var(--padding) / 2);
+}
+.upnext .item .upnext_box .name {
+  font-size: var(--font-small);
+}
+.upnext .item .upnext_box .views {
+  font-size: var(--font-micro);
+  color: var(--gery-light-color);
+}
+.upnext .item .moreBtn {
+  flex: 1 1 5%;
+}
+
+/* infoAndupnext */
+
+.infoAndupnext {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .infoAndupnext {
+    flex-direction: row;
+  }
+}
