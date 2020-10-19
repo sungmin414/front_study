@@ -185,22 +185,21 @@ header .icons .fa-search {
 .upnext .item .img img {
   width: 100%;
 }
-.upnext .item .info {
+.upnext .item .item_info {
   flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding);
 }
 .upnext .item .moreBtn {
   flex: 1 1 5%;
 }
-.upnext .item .info {
-  display: flex;
-  flex-direction: column;
-}
 
-.upnext .item .info .title {
+.upnext .item .item_info .title {
   font-size: var(--font-small);
 }
-.upnext .item .info .name,
-.upnext .item .info .views {
+.upnext .item .item_info .name,
+.upnext .item .item_info .views {
   font-size: var(--font-micro);
   color: var(--grey-dark-color);
 }
