@@ -1,0 +1,35 @@
+.level1 {
+  font-size: 2em;
+  /* 32 */
+}
+.level2 {
+  font-size: 2em;
+  /* 64 */
+}
+.level3 {
+  font-size: 2em;
+  /* 128 */
+}
+.level4 {
+  font-size: 2em;
+  /* 256 */
+}
+
+h1 {
+  display: inline-block;
+  font-size: 5em;
+  background-color: mediumaquamarine;
+  padding: 1em;
+}
+/* font siz를 em을 사용하고 padding도 em을 사용하면 font 값에 맞게 padding값 바뀜 */
+@media screen and (max-width: 780px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
